@@ -1,0 +1,50 @@
+import QtQuick 2.5
+import QtQuick.Controls 2.0
+
+ApplicationWindow {
+    visible: true
+    width: 360
+    height: 640
+
+    Canvas {
+        id: canvas
+        anchors.fill: parent
+
+        // Настройка капель дождя
+        property int dropCount: 100
+        property var drops: []
+
+        onPaint: {
+            var ctx = canvas.getContext("2d")
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+            // Рисуем каждую каплю
+            for (var i = 0; i < dropCount; i++) {
+                var drop = drops[i]
+                ctx.fillStyle = "green"
+                ctx.font = "20px monospace"
+                ctx.fillText(drop.char, drop.x, drop.y)
+                drop.y += drop.speed
+                // Если капля выходит за пределы экрана, перенести её наверх
+                if (drop.y > canvas.height) {
+                    drop.y = -20
+                    drop.x = Math.random() * canvas.width
+                }
+            }
+        }
+
+        Component.onCompleted: {
+            // Инициализация капель дождя
+            for (var i = 0; i < dropCount; i++) {
+                drops.push({
+                    char: String.fromCharCode(33 + Math.floor(Math.random() * 94)), // случайный символ
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    speed: 2 + Math.random() * 4
+                })
+            }
+            // Запуск анимации
+            canvas.requestPaint()
+        }
+    }
+}
