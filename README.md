@@ -1,6 +1,7 @@
 # utMatrix
 
-See matrix rain
+See matrix rain on your Ubuntu Touch!
+Смотрите же Матричный дождик на вашем Убунту тач
 
 ## License
 
