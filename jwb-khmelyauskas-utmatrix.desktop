@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=utMatrix
+Exec=webapp-container --app-id="jwb-khmelyauskas-utmatrix.khmelyauskas" $@ www/index.html
+Icon=assets/logo.svg
+Terminal=false
+Type=Application
+X-Lomiri-Touch=true

@@ -1,0 +1,15 @@
+{
+    "name": "jwb-khmelyauskas-utmatrix.khmelyauskas",
+    "description": "See matrix rain",
+    "architecture": "@CLICK_ARCH@",
+    "title": "utMatrix",
+    "hooks": {
+        "jwb-khmelyauskas-utmatrix": {
+            "apparmor": "jwb-khmelyauskas-utmatrix.apparmor",
+            "desktop":  "jwb-khmelyauskas-utmatrix.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "JasonWalt Bab@ <mardimusa8@gmail.com>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}
