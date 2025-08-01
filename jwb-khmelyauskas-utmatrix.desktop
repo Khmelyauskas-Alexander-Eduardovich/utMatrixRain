@@ -1,7 +1,13 @@
 [Desktop Entry]
 Name=utMatrix
+Name[ru]=Убунтовская Матрица
 Exec=webapp-container --app-id="jwb-khmelyauskas-utmatrix.khmelyauskas" $@ www/index.html
-Icon=assets/logo.svg
+Icon=Sprites/icon.svg
 Terminal=false
 Type=Application
 X-Lomiri-Touch=true
+X-Lomiri-Splash-Color=#000000
+X-Lomiri-Splash-Image=Sprites/splash.svg
+X-Lomiri-Splash-Image-Color=#ffffff
+X-Lomiri-Splash-Show-Header=false
+X-Ubuntu-Supported-Orientations=portrait
