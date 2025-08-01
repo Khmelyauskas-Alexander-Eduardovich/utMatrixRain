@@ -9,7 +9,7 @@
             "desktop":  "jwb-khmelyauskas-utmatrix.desktop"
         }
     },
-    "version": "1.0.0",
+    "version": "1.1.0",
     "maintainer": "JasonWalt Bab@ <mardimusa8@gmail.com>",
     "framework" : "@CLICK_FRAMEWORK@"
 }
